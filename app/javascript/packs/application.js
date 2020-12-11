@@ -15,3 +15,8 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import "controllers"
+import "../stylesheets/application"
+
+import { Tooltip, Toast, Popover } from 'bootstrap'
