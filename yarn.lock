@@ -1568,11 +1568,6 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap@^5.0.0-beta1:
-  version "5.0.0-beta1"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.0-beta1.tgz"
-  integrity sha512-UrHApw/WRmT7l2rlDdn5iXr7Jps/LlMZtJlLn9G41aGDfss48hyDeYyHtX1C6NHKVcmdUarGG+ve0LZB5iHyTQ==
-
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz"
@@ -7219,6 +7214,11 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+tailwindcss-stimulus-components@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/tailwindcss-stimulus-components/-/tailwindcss-stimulus-components-2.0.12.tgz#6c13b54005f04f0d04a7870450abdb6ec3c682ee"
+  integrity sha512-LHO8LB+LNAsehm36edB9tpwc0Qj2vbN7urYHdo9agGXGqA4n+sJg0E0UPaQY/FegqvuCK7CHVcYA/3fijNQ4UQ==
 
 "tailwindcss@yarn:@tailwindcss/postcss7-compat":
   version "2.0.2"
