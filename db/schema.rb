@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_11_200527) do
+ActiveRecord::Schema.define(version: 2020_12_21_044153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,23 +20,8 @@ ActiveRecord::Schema.define(version: 2020_12_11_200527) do
     t.bigint "question_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
     t.index ["question_id"], name: "index_answers_on_question_id"
-  end
-
-  create_table "form_questions", force: :cascade do |t|
-    t.bigint "form_id", null: false
-    t.bigint "question_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["form_id"], name: "index_form_questions_on_form_id"
-    t.index ["question_id"], name: "index_form_questions_on_question_id"
-  end
-
-  create_table "forms", force: :cascade do |t|
-    t.bigint "location_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["location_id"], name: "index_forms_on_location_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -56,8 +41,24 @@ ActiveRecord::Schema.define(version: 2020_12_11_200527) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "visit_questions", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "visit_id"
+    t.bigint "question_id"
+    t.index ["question_id"], name: "index_visit_questions_on_question_id"
+    t.index ["visit_id"], name: "index_visit_questions_on_visit_id"
+  end
+
+  create_table "visits", force: :cascade do |t|
+    t.bigint "location_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["location_id"], name: "index_visits_on_location_id"
+  end
+
   add_foreign_key "answers", "questions"
-  add_foreign_key "form_questions", "forms"
-  add_foreign_key "form_questions", "questions"
-  add_foreign_key "forms", "locations"
+  add_foreign_key "visit_questions", "questions"
+  add_foreign_key "visit_questions", "visits"
+  add_foreign_key "visits", "locations"
 end

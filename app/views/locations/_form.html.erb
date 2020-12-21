@@ -1,47 +1,65 @@
-<%= form_with(model: location, local: true) do |form| %>
-  <% if location.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(location.errors.count, "error") %> prohibited this location from being saved:</h2>
-
-      <ul>
-        <% location.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="mt-10 sm:mt-0">
+  <div class="md:grid md:grid-cols-3 md:gap-6">
+    <div class="md:col-span-1">
+      <div class="px-4 sm:px-0">
+        <h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
+        <p class="mt-1 text-sm text-gray-600">
+          Use a permanent address where you can receive mail.
+        </p>
+      </div>
     </div>
-  <% end %>
+    <div class="mt-5 md:mt-0 md:col-span-2">
+      <%= form_with(model: location, local: true) do |form| %>
+        <div class="shadow overflow-hidden sm:rounded-md">
+          <div class="px-4 py-5 bg-white sm:p-6">
+            <div class="grid grid-cols-6 gap-6">
+              <% if location.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(location.errors.count, "error") %> prohibited this location from being saved:</h2>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+                  <ul>
+                    <% location.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+              <div class="col-span-6 sm:col-span-3">
+                <%= form.label :name, class: "block text-sm font-medium text-gray-700" %>
+                <%= form.text_field :name, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+              <div class="col-span-6 sm:col-span-5">
+                <%= form.label :address1, class: "block text-sm font-medium text-gray-700" %>
+                <%= form.text_field :address1, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+              <div class="col-span-6 sm:col-span-5">
+                <%= form.label :address2, class: "block text-sm font-medium text-gray-700" %>
+                <%= form.text_field :address2, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+              <div class="col-span-6 sm:col-span-2">
+                <%= form.label :city, class: "block text-sm font-medium text-gray-700" %>
+                <%= form.text_field :city, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+              <div class="col-span-6 sm:col-span-2">
+                <label for="state" class="block text-sm font-medium text-gray-700">State</label>
+                <select id="state" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  <option>Alabama</option>
+                  <option>Louisiana</option>
+                  <option>Mississippi</option>
+                  <option>Texas</option>
+                </select>
+              </div>
+              <div class="col-span-6 sm:col-span-2">
+                <%= form.label :zip_code, class: "block text-sm font-medium text-gray-700" %>
+                <%= form.text_field :zip_code, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+              <div class="actipx-4 py-3 bg-gray-50 text-center sm:px-6ns">
+                <%= form.submit "Submit", class:"inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+              </div>
+            </div>
+          </div> 
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :address1 %>
-    <%= form.text_field :address1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address2 %>
-    <%= form.text_field :address2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
-  </div>
-
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
-  </div>
-
-  <div class="field">
-    <%= form.label :zip_code %>
-    <%= form.text_field :zip_code %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

@@ -1,5 +1,5 @@
 class Location < ApplicationRecord
 
-  has_many :forms
+  has_many :visits, dependent: :destroy
 
 end

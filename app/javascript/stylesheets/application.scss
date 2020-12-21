@@ -2,3 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "custom";
+
+.location-link:hover {
+  cursor: pointer;
+  background-color: darkgrey;
+}
