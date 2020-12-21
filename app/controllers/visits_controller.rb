@@ -6,13 +6,13 @@ class VisitsController < ApplicationController
   # GET /visits
   # GET /visits.json
   def index
-    @visits = @location.visits.all
+    @visits = @location.visits
   end
 
   # GET /visits/1
   # GET /visits/1.json
   def show
-    @visit = Visit.includes(:questions).find(params[:id])
+    @visit = @location.visits.includes(:questions).find(params[:id])
   end
 
   # GET /visits/new
