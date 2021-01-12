@@ -1,6 +1,6 @@
+# Visit is each time a form needs to be filled out at a location
 class VisitsController < ApplicationController
-
-  before_action :get_location
+  before_action :set_location
   before_action :set_visit, only: [:edit, :update, :destroy]
 
   # GET /visits
@@ -17,23 +17,27 @@ class VisitsController < ApplicationController
 
   # GET /visits/new
   def new
-    # @visit = Visit.new
-    @visit = @location.visits.build
+    @visit = Visit.new
+    # @visit.questions.build.answers.build
+    @visit.questions.build
+    @location_questions = Visit.includes(:questions).find_by(location_id: @location.id)
   end
 
   # GET /visits/1/edit
   def edit
+    @visit.questions.build
+    # @questions = @visit.questions
+    # @answers = @question.answers
   end
 
   # POST /visits
   # POST /visits.json
   def create
-    # @visit = Visit.new(visit_params)
-    @visit = @location.visits.build
-
+    @visit = Visit.new(visit_params)
+    @visit.questions.build
     respond_to do |format|
       if @visit.save
-        format.html { redirect_to @visit, notice: 'Visit was successfully created.' }
+        format.html { redirect_to location_visit_url(id: @visit.id, location_id: @location.id), notice: 'Visit was successfully created.' }
         format.json { render :show, status: :created, location: @visit }
       else
         format.html { render :new }
@@ -45,9 +49,10 @@ class VisitsController < ApplicationController
   # PATCH/PUT /visits/1
   # PATCH/PUT /visits/1.json
   def update
+    @visit.questions.build
     respond_to do |format|
       if @visit.update(visit_params)
-        format.html { redirect_to @visit, notice: 'Visit was successfully updated.' }
+        format.html { redirect_to location_visit_path(@location, @visit), notice: 'Visit was successfully updated.' }
         format.json { render :show, status: :ok, location: @visit }
       else
         format.html { render :edit }
@@ -67,17 +72,17 @@ class VisitsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_visit
-      @visit = Visit.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def visit_params
-      params.require(:visit).permit(:location_id)
-    end
+  def set_visit
+    @visit = Visit.find(params[:id])
+  end
 
-    def get_location
-      @location = Location.find(params[:location_id])
-    end
+  # Only allow a list of trusted parameters through.
+  def visit_params
+    params.require(:visit).permit(:location_id, questions_attributes: [:content, :id, :visit_id, :name, :answer, :body])
+  end
+
+  def set_location
+    @location = Location.find(params[:location_id])
+  end
 end

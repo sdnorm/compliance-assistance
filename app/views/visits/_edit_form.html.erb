@@ -27,25 +27,25 @@
       <div class="justify-items-center mr-3 ml-3">
         RDD1 
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "RDD1") do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD1" %>
-            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "RDD1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %> 
+            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         RDD2
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "RDD2") do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD2" %>
-            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "RDD2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %> 
+            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         RDD3
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "RDD3") do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD3" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -54,7 +54,7 @@
       <div class="justify-items-center mr-3 ml-3">
         RDD4
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "RDD4") do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD4" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -63,7 +63,7 @@
       <div class="justify-items-center mr-3 ml-3">
         RDD5
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "RDD5") do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD5" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -72,7 +72,7 @@
       <div class="justify-items-center mr-3 ml-3">
         RDD6
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "RDD6") do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD6" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -81,7 +81,7 @@
       <div class="justify-items-center mr-3 ml-3">
         RDD7
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "RDD7") do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD7" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -92,26 +92,26 @@
 
   <div class="flex justify-start items-center ml-4 mt-4">
     <div class="grid justify-items-center">
-      <strong>RECTIFIER READING</strong>
+      <strong>REDCTIFIER READING</strong>
     </div>
     <div class="flex flex-wrap ml-6">
       <div class="justify-items-center mr-3 ml-3">
-        <strong>Volts</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        Volts
+        <%= form.fields_for visit.questions.find_by(name: "Volts") do |question_form| %>
           <%= question_form.hidden_field :name, value: "Volts" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         AMPS
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "AMPS") do |question_form| %>
           <%= question_form.hidden_field :name, value: "AMPS" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         HRS
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "HRS") do |question_form| %>
           <%= question_form.hidden_field :name, value: "HRS" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
@@ -123,42 +123,42 @@
     <div class="flex flex-wrap items-center ml-6">
       <div class="justify-items-center mr-3 ml-3">
         <strong>STAGE 1</strong> 
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "STAGE 1") do |question_form| %>
           <%= question_form.hidden_field :name, value: "STAGE 1" %>
           <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>STAGE 2</strong> 
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "STAGE 2") do |question_form| %>
           <%= question_form.hidden_field :name, value: "STAGE 2" %>
           <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>TTT</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "TTT") do |question_form| %>
           <%= question_form.hidden_field :name, value: "TTT" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>1YR</strong> 
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "1YR") do |question_form| %>
           <%= question_form.hidden_field :name, value: "1YR" %>
           <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>3YR</strong> 
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "3YR") do |question_form| %>
           <%= question_form.hidden_field :name, value: "3YR" %>
           <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>5YR</strong> 
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "5YR") do |question_form| %>
           <%= question_form.hidden_field :name, value: "5YR" %>
           <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
@@ -174,7 +174,7 @@
       <div class="justify-items-center mr-3 ml-3">
         <strong>TK1</strong>
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK1") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK1" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -183,7 +183,7 @@
       <div class="justify-items-center mr-3 ml-3">
         <strong>TK2</strong>
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK2") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK2" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -192,7 +192,7 @@
       <div class="justify-items-center mr-3 ml-3">
         <strong>TK3</strong>
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK3") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK3" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -201,7 +201,7 @@
       <div class="justify-items-center mr-3 ml-3">
         <strong>TK4</strong>
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK4") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK4" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -210,7 +210,7 @@
       <div class="justify-items-center mr-3 ml-3">
         <strong>TK5</strong>
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK5") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK5" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -219,7 +219,7 @@
       <div class="justify-items-center mr-3 ml-3">
         <strong>TK6</strong>
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK6") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK6" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -228,7 +228,7 @@
       <div class="justify-items-center mr-3 ml-3">
         <strong>TK7</strong>
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK7") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK7" %>
             <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
@@ -244,7 +244,7 @@
     <div class="flex flex-wrap ml-4">
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SIR TK1") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK1" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -252,7 +252,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SIR TK2") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK2" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -260,7 +260,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SIR TK3") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK3" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -268,7 +268,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SIR TK4") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK4" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -276,7 +276,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SIR TK5") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK5" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -284,7 +284,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SIR TK6") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK6" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -292,7 +292,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SIR TK7") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK7" %>
             <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
@@ -314,7 +314,7 @@
     <div class="flex flex-wrap ml-4">
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SPILL TK1") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK1" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -322,7 +322,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SPILL TK2") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK2" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -330,7 +330,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SPILL TK3") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK3" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -338,7 +338,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SPILL TK4") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK4" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -346,7 +346,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SPILL TK5") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK5" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -354,7 +354,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SPILL TK6") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK6" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -362,7 +362,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "SPILL TK7") do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK7" %>
             <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
@@ -378,7 +378,7 @@
     <div class="flex flex-wrap ml-14">
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "OVERFILL TK1") do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK1" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -386,7 +386,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "OVERFILL TK2") do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK2" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -394,7 +394,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "OVERFILL TK3") do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK3" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -402,7 +402,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "OVERFILL TK4") do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK4" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -410,7 +410,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "OVERFILL TK5") do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK5" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -418,7 +418,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "OVERFILL TK6") do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK6" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -426,7 +426,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "OVERFILL TK7") do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK7" %>
             <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
@@ -436,7 +436,7 @@
   </div>
   <div class="flex justify-start items-center ml-8 mt1">
     <div class="justify-items-center mr-3 ml-3"> 
-      <%= form.fields_for :questions do |question_form| %>
+      <%= form.fields_for visit.questions.find_by(name: "OVERFILL DT") do |question_form| %>
         <%= question_form.hidden_field :name, value: "OVERFILL DT" %>
         <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
@@ -445,11 +445,11 @@
   </div>
   <div class="flex justify-start items-center ml-8 mt1">
     <div class="justify-items-center mr-3 ml-3"> 
-      <%= form.fields_for :questions do |question_form| %>
+      <%= form.fields_for visit.questions.find_by(name: "OVERFILL BF") do |question_form| %>
         <%= question_form.hidden_field :name, value: "OVERFILL BF" %>
         <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
-      Ball Float
+      Ballfloat
     </div>
   </div>
 
@@ -460,7 +460,7 @@
     <div class="flex flex-wrap ml-16">
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK1") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK1" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -468,7 +468,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK2") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK2" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -476,7 +476,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK3") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK3" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -484,7 +484,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK4") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK4" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -492,7 +492,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK5") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK5" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -500,7 +500,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK6") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK6" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -508,7 +508,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "ATG TK7") do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK7" %>
             <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
@@ -524,7 +524,7 @@
     <div class="flex flex-wrap ml-10">
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "DISPENSERS TK1") do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK1" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -532,7 +532,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "DISPENSERS TK2") do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK2" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -540,7 +540,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "DISPENSERS TK3") do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK3" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -548,7 +548,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "DISPENSERS TK4") do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK4" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -556,7 +556,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "DISPENSERS TK5") do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK5" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -564,7 +564,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "DISPENSERS TK6") do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK6" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -572,7 +572,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "DISPENSERS TK7") do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK7" %>
             <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
@@ -582,7 +582,7 @@
   </div>
   <div class="flex justify-start items-center ml-8 mt1">
     <div class="justify-items-center mr-3 ml-3"> 
-      <%= form.fields_for :questions do |question_form| %>
+      <%= form.fields_for visit.questions.find_by(name: "DISPENSERS BOOTED") do |question_form| %>
         <%= question_form.hidden_field :name, value: "DISPENSERS BOOTED" %>
         <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
@@ -591,7 +591,7 @@
   </div>
   <div class="flex justify-start items-center ml-8 mt1">
     <div class="justify-items-center mr-3 ml-3"> 
-      <%= form.fields_for :questions do |question_form| %>
+      <%= form.fields_for visit.questions.find_by(name: "DISPENSERS DRY") do |question_form| %>
         <%= question_form.hidden_field :name, value: "DISPENSERS DRY" %>
         <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
@@ -600,7 +600,7 @@
   </div>
   <div class="flex justify-start items-center ml-8 mt1">
     <div class="justify-items-center mr-3 ml-3"> 
-      <%= form.fields_for :questions do |question_form| %>
+      <%= form.fields_for visit.questions.find_by(name: "DISPENSERS ANNODES") do |question_form| %>
         <%= question_form.hidden_field :name, value: "DISPENSERS ANNODES" %>
         <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
@@ -609,7 +609,7 @@
   </div>
   <div class="flex justify-start items-center ml-8 mt1">
     <div class="justify-items-center mr-3 ml-3"> 
-      <%= form.fields_for :questions do |question_form| %>
+      <%= form.fields_for visit.questions.find_by(name: "DISPENSERS LC") do |question_form| %>
         <%= question_form.hidden_field :name, value: "DISPENSERS LC" %>
         <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
@@ -630,7 +630,7 @@
     <div class="flex flex-wrap ml-10">
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "STP TK1") do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK1" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -638,7 +638,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "STP TK2") do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK2" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -646,7 +646,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "STP TK3") do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK3" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -654,7 +654,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "STP TK4") do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK4" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -662,7 +662,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "STP TK5") do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK5" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -670,7 +670,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "STP TK6") do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK6" %>
             <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
@@ -678,7 +678,7 @@
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <div>
-          <%= form.fields_for :questions do |question_form| %>
+          <%= form.fields_for visit.questions.find_by(name: "STP TK7") do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK7" %>
             <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
@@ -688,7 +688,7 @@
   </div>
   <div class="flex justify-start items-center ml-8 mt1">
     <div class="justify-items-center mr-3 ml-3"> 
-      <%= form.fields_for :questions do |question_form| %>
+      <%= form.fields_for visit.questions.find_by(name: "STP DRY") do |question_form| %>
         <%= question_form.hidden_field :name, value: "STP DRY" %>
         <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
@@ -697,7 +697,7 @@
   </div>
   <div class="flex justify-start items-center ml-8 mt1">
     <div class="justify-items-center mr-3 ml-3"> 
-      <%= form.fields_for :questions do |question_form| %>
+      <%= form.fields_for visit.questions.find_by(name: "STP ANNODES") do |question_form| %>
         <%= question_form.hidden_field :name, value: "STP ANNODES" %>
         <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
@@ -706,7 +706,7 @@
   </div>
   <div class="flex justify-start items-center ml-8 mt1">
     <div class="justify-items-center mr-3 ml-3"> 
-      <%= form.fields_for :questions do |question_form| %>
+      <%= form.fields_for visit.questions.find_by(name: "STP LC") do |question_form| %>
         <%= question_form.hidden_field :name, value: "STP LC" %>
         <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
@@ -722,10 +722,10 @@
             <strong>Comments</strong>
           </label>
           <div class="mt-1">
-            <%= form.fields_for :questions do |question_form| %>
-              <%= question_form.hidden_field :name, value: "COMMENT" %>
-              <%= question_form.text_area :body, rows: "3", class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" %>
-            <% end %>
+            <%= form.fields_for visit.questions.find_by(name: "COMMENT") do |question_form| %>
+          <%= question_form.hidden_field :name, value: "COMMENT" %>
+          <%= question_form.text_area :answer, rows: "3", class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" %>
+        <% end %>
           </div>
         </div>
       </div>
@@ -736,35 +736,35 @@
     <div class="flex flex-wrap items-center ml-6">
       <div class="justify-items-center mr-3 ml-3">
         <strong>DEQ:</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "DEQ") do |question_form| %>
           <%= question_form.hidden_field :name, value: "DEQ" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>Cert:</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "CERT") do |question_form| %>
           <%= question_form.hidden_field :name, value: "CERT" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>L,LD:</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "LLD") do |question_form| %>
           <%= question_form.hidden_field :name, value: "LLD" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>CP:</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "CP") do |question_form| %>
           <%= question_form.hidden_field :name, value: "CP" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>VR:</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "VR") do |question_form| %>
           <%= question_form.hidden_field :name, value: "VR" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
@@ -776,28 +776,28 @@
     <div class="flex flex-wrap items-center ml-6">
       <div class="justify-items-center mr-3 ml-3">
         <strong>OT:</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "OT") do |question_form| %>
           <%= question_form.hidden_field :name, value: "OT" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>2021:</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "2021") do |question_form| %>
           <%= question_form.hidden_field :name, value: "2021" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>LE:</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "LE") do |question_form| %>
           <%= question_form.hidden_field :name, value: "LE" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>T/Co:</strong>
-        <%= form.fields_for :questions do |question_form| %>
+        <%= form.fields_for visit.questions.find_by(name: "TCO") do |question_form| %>
           <%= question_form.hidden_field :name, value: "TCO" %>
           <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>

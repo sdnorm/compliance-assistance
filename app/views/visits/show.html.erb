@@ -1,12 +1,30 @@
-<p id="notice"><%= notice %></p>
-
+<div class="fixed inset-x-0 top-0 flex items-end justify-right px-4 py-6 sm:p-6 justify-end z-30 pointer-events-none">
+  <div data-controller="alert" class="max-w-sm w-full shadow-lg rounded px-4 py-3 rounded relative bg-green-400 border-l-4 border-green-700 text-white pointer-events-auto">
+    <div class="p-2">
+      <div class="flex items-start">
+        <div class="ml-3 w-0 flex-1 pt-0.5">
+          <p class="text-sm leading-5 font-medium">
+            <%= notice %>
+          </p>
+        </div>
+        <div class="ml-4 flex-shrink-0 flex">
+          <button data-action="alert#close" class="inline-flex text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="flex justify-around mb-3 mt-3">
   <div class="grid justify-item-center">
-    <%= link_to 'Edit', edit_location_visit_path(@visit) %>
+    <%= link_to 'Edit', edit_location_visit_path(@location, @visit), class: "py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400" %>
   </div>
   <div class="grid justify-item-center">
-    <%= link_to 'Back', location_visits_path %>
+    <%= link_to 'Back', location_visits_path, class: "py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400" %>
   </div>
 </div>
 
@@ -32,200 +50,34 @@
     </div>
   </div>
   <div class="flex flex-wrap ml-6">
-    <% @visit.questions.first.answers.each do |a| %>
-      <div class="justify-items-center mr-3 ml-3">
-        <strong><%= a.name %></strong>
-        <div><%= a.content %></div>
-      </div>
-    <% end %>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>RDD1</strong>
+      <div><%= @visit.questions.where(name: "RDD1").first.answer %></div>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>RDD2</strong>
+      <div><%= @visit.questions.where(name: "RDD2").first.answer %></div>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>RDD3</strong>
+      <div><%= @visit.questions.where(name: "RDD3").first.answer %></div>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>RDD4</strong>
+      <div><%= @visit.questions.where(name: "RDD4").first.answer %></div>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>RDD5</strong>
+      <div><%= @visit.questions.where(name: "RDD5").first.answer %></div>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>RDD6</strong>
+      <div><%= @visit.questions.where(name: "RDD6").first.answer %></div>
+    </div>
   </div>
 </div>
 
-<div class="flex justify-start content-center ml-4 mt-4">
-  <div class="grid justify-item-center">
-    <strong>Rectifier Reading</strong>
-  </div>
-  <div class="flex flex-wrap">
-    <% @visit.questions.second.answers.each do |a| %>
-      <div class="justify-center mr-3 ml-3">
-        <%= a.name %>:
-        <%= a.content %>
-      </div>
-    <% end %>
-  </div>
-</div>
 
-<div class="flex justify-start content-center ml-4 mt-4">
-  <div class="mr-3">
-    <strong><%= @visit.questions.find_by(content: "Tank Tightness Test").answers[2].name %></strong>
-  </div>
-  <div class="mr-3">
-    <%= @visit.questions.find_by(content: "Tank Tightness Test").answers[2].content %>
-  </div>
-  <div class="mr-3">
-    <strong><%= @visit.questions.find_by(content: "Tank Tightness Test").answers[1].name %></strong>
-  </div>
-  <div class="mr-3">
-    <%= @visit.questions.find_by(content: "Tank Tightness Test").answers[1].content %>
-  </div>
-  <div class="mr-3">
-    <strong><%= @visit.questions.find_by(content: "Tank Tightness Test").answers[0].name %></strong>
-  </div>
-  <div class="mr-3">
-    <%= @visit.questions.find_by(content: "Tank Tightness Test").answers[0].content %>
-  </div>
-  <div class="mr-3">
-    <strong><%= @visit.questions.find_by(content: "Tank Tightness Test").answers[3].name %></strong>
-  </div>
-  <div class="mr-3">
-    <%= @visit.questions.find_by(content: "Tank Tightness Test").answers[3].content %>
-  </div>
-  <div class="mr-3">
-    <strong><%= @visit.questions.find_by(content: "Tank Tightness Test").answers[4].name %></strong>
-  </div>
-  <div class="mr-3">
-    <%= @visit.questions.find_by(content: "Tank Tightness Test").answers[4].content %>
-  </div>
-  <div class="mr-3">
-    <strong><%= @visit.questions.find_by(content: "Tank Tightness Test").answers[5].name %></strong>
-  </div>
-  <div class="mr-3">
-    <%= @visit.questions.find_by(content: "Tank Tightness Test").answers[5].content %>
-  </div>
-</div>
-
-<div class="flex justify-start ml-4 mt-4">
-  <div class="grid justify-items-center items-end">
-    <strong>ATG Valid Tests</strong>
-  </div>
-  <div class="flex flex-wrap">
-    <% @visit.questions.find_by(content: "S.I.R. System").answers.order(name: :asc).each do |a| %>
-      <div class="justify-center mr-3 ml-11">
-        <strong><%= a.name %></strong>
-        <div>
-          <%= a.content %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-4">
-  <div class="grid justify-item-center">
-    <strong>S.I.R. System</strong>
-  </div>
-  <div class="flex flex-wrap">
-    <% @visit.questions.find_by(content: "S.I.R. System").answers.each do |a| %>
-      <div class="justify-center mr-3 ml-3">
-        <%= a.content %>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-4">
-  <div class="grid justify-item-center">
-    <span style="text-decoration:underline;">Monthly</span>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-2">
-  <div class="grid justify-item-center">
-    <strong>Spill Buckets</strong>
-  </div>
-  <div class="flex flex-wrap">
-    <% @visit.questions.find_by(content: "Spill Buckets").answers.each do |a| %>
-      <div class="justify-center mr-3 ml-3.5">
-        <%= a.content %>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-2">
-  <div class="grid justify-item-center">
-    <strong>Overfill</strong>
-  </div>
-  <div class="flex flex-wrap">
-    <% @visit.questions.find_by(content: "Overfill").answers.each do |a| %>
-      <div class="justify-center mr-3 ml-7">
-        <%= a.options %>
-        <div><%= a.content %></div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-2">
-  <div class="grid justify-item-center">
-    <strong>ATG</strong>
-  </div>
-  <div class="flex flex-wrap">
-    <% @visit.questions.find_by(content: "ATG").answers.each do |a| %>
-      <div class="justify-center mr-3 ml-16">
-        <%= a.content %>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-2">
-  <div class="grid justify-item-center">
-    <strong>Dispensers</strong>
-  </div>
-  <div class="flex flex-wrap">
-    <% @visit.questions.find_by(content: "Dispensers").answers.each do |a| %>
-      <div class="justify-center mr-3 ml-16">
-        <%= a.options %>
-        <div><%= a.content %></div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-4">
-  <div class="grid justify-item-center">
-    <span style="text-decoration:underline;">Annually</span>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-2">
-  <div class="grid justify-item-center">
-    <strong>STP Sumps</strong>
-  </div>
-  <div class="flex flex-wrap">
-    <% @visit.questions.find_by(content: "STP Sumps").answers.each do |a| %>
-      <div class="justify-center mr-3 ml-16">
-        <%= a.options %>
-        <div><%= a.content %></div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-2">
-  <div class="grid justify-item-center">
-    <strong>Comments:</strong>
-  </div>
-  <div class="flex flex-wrap">
-    <% @visit.questions.find_by(content: "Comments").answers.each do |a| %>
-      <div class="justify-center mr-3 ml-16">
-        <%= a.content %>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="flex justify-start content-center ml-4 mt-3">
-  <div class="flex flex-wrap">
-    <% @visit.questions.find_by(content: "bottom fields").answers.each do |a| %>
-      <div class="justify-center mr-3 ml-3">
-        <strong><%= a.name %>:</strong>
-        <%= a.content %>
-      </div>
-    <% end %>
-  </div>
-</div>
 
 <div class="flex justify-around mt-8">
   <div class="grid justify-item-center">

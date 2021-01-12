@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   
   resources :locations do
     resources :visits do
-      resources :answers
-      resources :questions
+      resources :questions do 
+        resources :answers
+      end
     end
   end
 

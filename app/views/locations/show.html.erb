@@ -47,7 +47,7 @@
             <% @location.visits.each do |v| %>
               <tr>
                 <td class="p-6">
-                  <%= link_to location_visit_path(v), class: "py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400" do %>
+                  <%= link_to location_visit_path(@location, v), class: "py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400" do %>
                     <%= v.created_at.in_time_zone("Central Time (US & Canada)").strftime('%b-%d-%Y') %>
                   <% end %>
                 </td>

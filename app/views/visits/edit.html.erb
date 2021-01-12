@@ -1,6 +1,6 @@
 <h1>Editing Visit</h1>
 
-<%= render 'form', visit: @visit %>
+<%= render 'edit_form', visit: @visit %>
 
-<%= link_to 'Show', @visit %> |
+<%= link_to 'Show', location_visit_path(@location, @visit) %> |
 <%= link_to 'Back', location_visits_path %>
