@@ -1,0 +1,63 @@
+<div class="flex justify-start items-center ml-8 mt-4">
+    <div class="grid justify-items-center mr-6">
+      <strong>ATG</strong>
+    </div>
+    <div class="flex flex-wrap ml-16">
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "ATG TK1" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "ATG TK2" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "ATG TK3" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "ATG TK4" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "ATG TK5" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "ATG TK6" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "ATG TK7" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK7"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>

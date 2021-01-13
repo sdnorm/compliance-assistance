@@ -11,7 +11,7 @@ module ApplicationHelper
     if location_questions.find_by(name: question_name).nil?
       ""
     else
-      "#{location_questions.where(name: question_name).last.answer}"
+      "#{location_questions.where(name: question_name).order(created_at: :desc).last.answer}"
     end
   end
 
@@ -20,6 +20,14 @@ module ApplicationHelper
       ""
     else
       "#{location_questions.where(name: "COMMENT").last.body}"
+    end
+  end
+
+  def checked_checkbox(value)
+    if value == "1"
+      return true
+    else
+      return false
     end
   end
 

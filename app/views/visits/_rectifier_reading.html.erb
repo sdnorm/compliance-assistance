@@ -1,0 +1,28 @@
+<div class="flex justify-start items-center ml-4 mt-4">
+  <div class="grid justify-items-center">
+    <strong>RECTIFIER READING</strong>
+  </div>
+  <div class="flex flex-wrap ml-6">
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>Volts</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "Volts" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "Volts"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      AMPS
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "AMPS" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "AMPS"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      HRS
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "HRS" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "HRS"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+  </div>
+</div>

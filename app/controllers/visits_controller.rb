@@ -20,7 +20,7 @@ class VisitsController < ApplicationController
     @visit = Visit.new
     # @visit.questions.build.answers.build
     @visit.questions.build
-    @location_questions = Visit.includes(:questions).find_by(location_id: @location.id)
+    @location_questions = Visit.includes(:questions).where(location_id: @location.id).last
   end
 
   # GET /visits/1/edit

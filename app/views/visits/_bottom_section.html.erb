@@ -1,0 +1,72 @@
+<div class="flex justify-start items-center ml-4 mt-4">
+  <div class="flex flex-wrap items-center ml-6">
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>DEQ:</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "DEQ" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "DEQ"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>Cert:</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "CERT" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "CERT"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>L,LD:</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "LLD" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "LLD"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>CP:</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "CP" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "CP"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>VR:</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "VR" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "VR"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="flex justify-start items-center ml-4 mt-4">
+  <div class="flex flex-wrap items-center ml-6">
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>OT:</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "OT" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OT"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>2021:</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "2021" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "2021"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>LE:</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "LE" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "LE"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>T/Co:</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "TCO" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "TCO"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+  </div>
+</div>

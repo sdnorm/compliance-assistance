@@ -1,6 +1,14 @@
-<h1>Editing Visit</h1>
+<div class="flex justify-around mb-3 mt-3">
+  <div class="grid justify-item-center">
+    <%= link_to 'Show', location_visit_path(@location, @visit), class: "py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400" %>
+  </div>
+  <div class="grid justify-item-center">
+    <%= link_to 'Back', location_path(@location), class: "py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400" %>
+  </div>
+</div>
+
+<div class="flex justify-around mb-3 mt-3">
+  <h1>Editing Visit</h1>
+</div>
 
 <%= render 'edit_form', visit: @visit %>
-
-<%= link_to 'Show', location_visit_path(@location, @visit) %> |
-<%= link_to 'Back', location_visits_path %>

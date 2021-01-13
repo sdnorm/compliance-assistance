@@ -1,0 +1,46 @@
+<div class="flex justify-start items-center ml-4 mt-4">
+  <div class="flex flex-wrap items-center ml-6">
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>STAGE 1</strong> 
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "STAGE 1" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "STAGE 1"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded", checked: checked_checkbox(existing_value(@location_questions.questions, "STAGE 1")) %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>STAGE 2</strong> 
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "STAGE 2" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "STAGE 2"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded", checked: checked_checkbox(existing_value(@location_questions.questions, "STAGE 2")) %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>TTT</strong>
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "TTT" %>
+        <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "TTT"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>1YR</strong> 
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "1YR" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "1YR"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded", checked: checked_checkbox(existing_value(@location_questions.questions, "1YR")) %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>3YR</strong> 
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "3YR" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "3YR"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded", checked: checked_checkbox(existing_value(@location_questions.questions, "3YR")) %>
+      <% end %>
+    </div>
+    <div class="justify-items-center mr-3 ml-3">
+      <strong>5YR</strong> 
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "5YR" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "5YR"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded", checked: checked_checkbox(existing_value(@location_questions.questions, "5YR")) %>
+      <% end %>
+    </div>
+  </div>
+</div>

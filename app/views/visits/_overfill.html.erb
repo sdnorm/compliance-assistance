@@ -1,70 +1,81 @@
-<div class="flex justify-start items-center ml-8 mt-4">
-  <div class="grid justify-items-center">
-    <strong>OVERFILL</strong>
-  </div>
-  <div>
-    <%= form.fields_for visit.questions.find_by(name: "RDD1") do |question_form| %>
-      <%= question_form.hidden_field :name, value: "RDD1" %>
-      <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
-    <% end %>
-    Drop Tube
-  </div>
-  <div class="flex flex-wrap ml-6">
-    <div class="justify-items-center mr-3 ml-3">
-      <div>
-        <%= form.fields_for visit.questions.find_by(name: "RDD1") do |question_form| %>
-          <%= question_form.hidden_field :name, value: "RDD1" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
-        <% end %>
-      </div>
+<div class="flex justify-start items-center ml-8 mt-4 ">
+    <div class="grid justify-items-center mr-1">
+      <strong>OVERFILL</strong>
     </div>
-    <div class="justify-items-center mr-3 ml-3">
-      <div>
-        <%= form.fields_for visit.questions.find_by(name: "RDD2") do |question_form| %>
-          <%= question_form.hidden_field :name, value: "RDD2" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
-        <% end %>
+    <div class="flex flex-wrap ml-14">
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "OVERFILL TK1" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="justify-items-center mr-3 ml-3">
-      <div>
-        <%= form.fields_for visit.questions.find_by(name: "RDD3") do |question_form| %>
-          <%= question_form.hidden_field :name, value: "RDD3" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
-        <% end %>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "OVERFILL TK2" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="justify-items-center mr-3 ml-3">
-      <div>
-        <%= form.fields_for visit.questions.find_by(name: "RDD4") do |question_form| %>
-          <%= question_form.hidden_field :name, value: "RDD4" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
-        <% end %>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "OVERFILL TK3" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="justify-items-center mr-3 ml-3">
-      <div>
-        <%= form.fields_for visit.questions.find_by(name: "RDD5") do |question_form| %>
-          <%= question_form.hidden_field :name, value: "RDD5" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
-        <% end %>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "OVERFILL TK4" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="justify-items-center mr-3 ml-3">
-      <div>
-        <%= form.fields_for visit.questions.find_by(name: "RDD6") do |question_form| %>
-          <%= question_form.hidden_field :name, value: "RDD6" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
-        <% end %>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "OVERFILL TK5" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="justify-items-center mr-3 ml-3">
-      <div>
-        <%= form.fields_for visit.questions.find_by(name: "RDD7") do |question_form| %>
-          <%= question_form.hidden_field :name, value: "RDD7" %>
-          <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
-        <% end %>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "OVERFILL TK6" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="justify-items-center mr-3 ml-3">
+        <div>
+          <%= form.fields_for :questions do |question_form| %>
+            <%= question_form.hidden_field :name, value: "OVERFILL TK7" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK7"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="flex justify-start items-center ml-8 mt1">
+    <div class="justify-items-center mr-3 ml-3"> 
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "OVERFILL DT" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "OVERFILL DT"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded", checked: checked_checkbox(existing_value(@location_questions.questions, "OVERFILL DT")) %>
+      <% end %>
+      Drop Tube
+    </div>
+  </div>
+  <div class="flex justify-start items-center ml-8 mt1">
+    <div class="justify-items-center mr-3 ml-3"> 
+      <%= form.fields_for :questions do |question_form| %>
+        <%= question_form.hidden_field :name, value: "OVERFILL BF" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "OVERFILL BF"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded", checked: checked_checkbox(existing_value(@location_questions.questions, "OVERFILL BF")) %>
+      <% end %>
+      Ball Float
+    </div>
+  </div>
