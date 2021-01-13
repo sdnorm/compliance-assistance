@@ -5,9 +5,9 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     if params[:query].present?
-      @locations = Location.search(params[:query])
+      @locations = Location.search(params[:query]).paginate(page: params[:page], per_page: 15)
     else
-      @locations = Location.all
+      @locations = Location.paginate(page: params[:page], per_page: 15)
     end
   end
 
