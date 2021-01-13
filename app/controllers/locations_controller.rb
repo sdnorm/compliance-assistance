@@ -4,7 +4,11 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
+    if params[:query].present?
+      @locations = Location.search(params[:query])
+    else
+      @locations = Location.all
+    end
   end
 
   # GET /locations/1
@@ -69,6 +73,6 @@ class LocationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def location_params
-      params.require(:location).permit(:name, :address1, :address2, :city, :state, :zip_code)
+      params.require(:location).permit(:name, :address1, :address2, :city, :state, :zip_code, :agency_interest_number)
     end
 end
