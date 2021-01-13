@@ -11,7 +11,7 @@
     "@tailwindcss/typography": "^0.3.1",
     "popper.js": "^1.16.1",
     "stimulus": "^2.0.0",
-    "tailwindcss": "yarn:@tailwindcss/postcss7-compat",
+    "tailwindcss": "^2.0.2",
     "tailwindcss-stimulus-components": "^2.0.12",
     "turbolinks": "^5.2.0"
   },
