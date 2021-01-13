@@ -15,4 +15,12 @@ module ApplicationHelper
     end
   end
 
+  def existing_comment_value(location_questions)
+    if location_questions.find_by(name: "COMMENT").nil?
+      ""
+    else
+      "#{location_questions.where(name: "COMMENT").last.body}"
+    end
+  end
+
 end

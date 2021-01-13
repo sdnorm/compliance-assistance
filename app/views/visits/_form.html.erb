@@ -47,7 +47,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD3" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "RDD3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -56,7 +56,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD4" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "RDD4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -65,7 +65,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD5" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "RDD5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -74,7 +74,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD6" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "RDD6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -83,7 +83,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "RDD7" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "RDD7"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -99,21 +99,21 @@
         <strong>Volts</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "Volts" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "Volts"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         AMPS
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "AMPS" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "AMPS"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         HRS
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "HRS" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "HRS"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
     </div>
@@ -125,42 +125,42 @@
         <strong>STAGE 1</strong> 
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "STAGE 1" %>
-          <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+          <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "STAGE 1"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>STAGE 2</strong> 
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "STAGE 2" %>
-          <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+          <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "STAGE 2"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>TTT</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "TTT" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "TTT"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>1YR</strong> 
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "1YR" %>
-          <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+          <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "1YR"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>3YR</strong> 
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "3YR" %>
-          <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+          <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "3YR"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>5YR</strong> 
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "5YR" %>
-          <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+          <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "5YR"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
         <% end %>
       </div>
     </div>
@@ -175,8 +175,8 @@
         <strong>TK1</strong>
         <div>
           <%= form.fields_for :questions do |question_form| %>
-            <%= question_form.hidden_field :name, value: "ATG TK1" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.hidden_field :name, value: "ATGVT TK1" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATGVT TK1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -184,8 +184,8 @@
         <strong>TK2</strong>
         <div>
           <%= form.fields_for :questions do |question_form| %>
-            <%= question_form.hidden_field :name, value: "ATG TK2" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.hidden_field :name, value: "ATGVT TK2" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATGVT TK2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -193,8 +193,8 @@
         <strong>TK3</strong>
         <div>
           <%= form.fields_for :questions do |question_form| %>
-            <%= question_form.hidden_field :name, value: "ATG TK3" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.hidden_field :name, value: "ATGVT TK3" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATGVT TK3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -202,8 +202,8 @@
         <strong>TK4</strong>
         <div>
           <%= form.fields_for :questions do |question_form| %>
-            <%= question_form.hidden_field :name, value: "ATG TK4" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.hidden_field :name, value: "ATGVT TK4" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATGVT TK4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -211,8 +211,8 @@
         <strong>TK5</strong>
         <div>
           <%= form.fields_for :questions do |question_form| %>
-            <%= question_form.hidden_field :name, value: "ATG TK5" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.hidden_field :name, value: "ATGVT TK5" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATGVT TK5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -220,8 +220,8 @@
         <strong>TK6</strong>
         <div>
           <%= form.fields_for :questions do |question_form| %>
-            <%= question_form.hidden_field :name, value: "ATG TK6" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.hidden_field :name, value: "ATGVT TK6" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATGVT TK6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -229,8 +229,8 @@
         <strong>TK7</strong>
         <div>
           <%= form.fields_for :questions do |question_form| %>
-            <%= question_form.hidden_field :name, value: "ATG TK7" %>
-            <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
+            <%= question_form.hidden_field :name, value: "ATGVT TK7" %>
+            <%= question_form.number_field :answer, value: existing_value(@location_questions.questions, "ATGVT TK17"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
         </div>
       </div>
@@ -246,7 +246,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK1" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SIR TK1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -254,7 +254,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK2" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SIR TK2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -262,7 +262,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK3" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SIR TK3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -270,7 +270,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK4" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SIR TK4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -278,7 +278,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK5" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SIR TK5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -286,7 +286,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK6" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SIR TK6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -294,7 +294,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SIR TK7" %>
-            <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
+            <%= question_form.number_field :answer, value: existing_value(@location_questions.questions, "SIR TK7"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
         </div>
       </div>
@@ -316,7 +316,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK1" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SPILL TK1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -324,7 +324,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK2" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SPILL TK2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -332,7 +332,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK3" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SPILL TK3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -340,7 +340,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK4" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SPILL TK4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -348,7 +348,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK5" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SPILL TK5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -356,7 +356,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK6" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "SPILL TK6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -364,7 +364,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "SPILL TK7" %>
-            <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
+            <%= question_form.number_field :answer, value: existing_value(@location_questions.questions, "SPILL TK7"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
         </div>
       </div>
@@ -380,7 +380,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK1" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -388,7 +388,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK2" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -396,7 +396,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK3" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -404,7 +404,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK4" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -412,7 +412,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK5" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -420,7 +420,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK6" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -428,7 +428,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "OVERFILL TK7" %>
-            <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
+            <%= question_form.number_field :answer, value: existing_value(@location_questions.questions, "OVERFILL TK7"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
         </div>
       </div>
@@ -438,7 +438,7 @@
     <div class="justify-items-center mr-3 ml-3"> 
       <%= form.fields_for :questions do |question_form| %>
         <%= question_form.hidden_field :name, value: "OVERFILL DT" %>
-        <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "OVERFILL DT"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
       Drop Tube
     </div>
@@ -447,7 +447,7 @@
     <div class="justify-items-center mr-3 ml-3"> 
       <%= form.fields_for :questions do |question_form| %>
         <%= question_form.hidden_field :name, value: "OVERFILL BF" %>
-        <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "OVERFILL BF"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
       Ball Float
     </div>
@@ -462,7 +462,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK1" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -470,7 +470,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK2" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -478,7 +478,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK3" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -486,7 +486,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK4" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -494,7 +494,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK5" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -502,7 +502,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK6" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "ATG TK6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -510,7 +510,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "ATG TK7" %>
-            <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
+            <%= question_form.number_field :answer, value: existing_value(@location_questions.questions, "ATG TK7"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
         </div>
       </div>
@@ -526,7 +526,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK1" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "DISPENSERS TK1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -534,7 +534,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK2" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "DISPENSERS TK2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -542,7 +542,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK3" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "DISPENSERS TK3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -550,7 +550,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK4" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "DISPENSERS TK4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -558,7 +558,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK5" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "DISPENSERS TK5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -566,7 +566,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK6" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "DISPENSERS TK6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -574,7 +574,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "DISPENSERS TK7" %>
-            <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
+            <%= question_form.number_field :answer, value: existing_value(@location_questions.questions, "DISPENSERS TK7"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
         </div>
       </div>
@@ -584,7 +584,7 @@
     <div class="justify-items-center mr-3 ml-3"> 
       <%= form.fields_for :questions do |question_form| %>
         <%= question_form.hidden_field :name, value: "DISPENSERS BOOTED" %>
-        <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "DISPENSERS BOOTED"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
       BOOTED
     </div>
@@ -593,7 +593,7 @@
     <div class="justify-items-center mr-3 ml-3"> 
       <%= form.fields_for :questions do |question_form| %>
         <%= question_form.hidden_field :name, value: "DISPENSERS DRY" %>
-        <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "DISPENSERS DRY"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
       DRY
     </div>
@@ -602,7 +602,7 @@
     <div class="justify-items-center mr-3 ml-3"> 
       <%= form.fields_for :questions do |question_form| %>
         <%= question_form.hidden_field :name, value: "DISPENSERS ANNODES" %>
-        <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "DISPENSERS ANNODES"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
       ANNODES
     </div>
@@ -611,7 +611,7 @@
     <div class="justify-items-center mr-3 ml-3"> 
       <%= form.fields_for :questions do |question_form| %>
         <%= question_form.hidden_field :name, value: "DISPENSERS LC" %>
-        <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "DISPENSERS LC"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
       L.C.
     </div>
@@ -632,7 +632,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK1" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "STP TK1"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -640,7 +640,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK2" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "STP TK2"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -648,7 +648,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK3" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "STP TK3"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -656,7 +656,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK4" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "STP TK4"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -664,7 +664,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK5" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "STP TK5"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -672,7 +672,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK6" %>
-            <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
+            <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "STP TK6"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300" %>
           <% end %>
         </div>
       </div>
@@ -680,7 +680,7 @@
         <div>
           <%= form.fields_for :questions do |question_form| %>
             <%= question_form.hidden_field :name, value: "STP TK7" %>
-            <%= question_form.number_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
+            <%= question_form.number_field :answer, value: existing_value(@location_questions.questions, "STP TK7"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-14 flex-auto rounded-md sm:text-sm border-gray-300", inputmode: "numeric" %>
           <% end %>
         </div>
       </div>
@@ -690,7 +690,7 @@
     <div class="justify-items-center mr-3 ml-3"> 
       <%= form.fields_for :questions do |question_form| %>
         <%= question_form.hidden_field :name, value: "STP DRY" %>
-        <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "STP DRY"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
       DRY
     </div>
@@ -699,7 +699,7 @@
     <div class="justify-items-center mr-3 ml-3"> 
       <%= form.fields_for :questions do |question_form| %>
         <%= question_form.hidden_field :name, value: "STP ANNODES" %>
-        <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "STP ANNODEs"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
       ANNODES
     </div>
@@ -708,7 +708,7 @@
     <div class="justify-items-center mr-3 ml-3"> 
       <%= form.fields_for :questions do |question_form| %>
         <%= question_form.hidden_field :name, value: "STP LC" %>
-        <%= question_form.check_box :answer, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+        <%= question_form.check_box :answer, value: existing_value(@location_questions.questions, "STP LC"), class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
       <% end %>
       L.C.
     </div>
@@ -724,7 +724,7 @@
           <div class="mt-1">
             <%= form.fields_for :questions do |question_form| %>
               <%= question_form.hidden_field :name, value: "COMMENT" %>
-              <%= question_form.text_area :body, rows: "3", class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" %>
+              <%= question_form.text_area :body, rows: "3",, value: existing_comment_value(@location_questions.questions) class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" %>
             <% end %>
           </div>
         </div>
@@ -738,35 +738,35 @@
         <strong>DEQ:</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "DEQ" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "DEQ"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>Cert:</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "CERT" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "CERT"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>L,LD:</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "LLD" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "LLD"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>CP:</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "CP" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "CP"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>VR:</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "VR" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "VR"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
     </div>
@@ -778,28 +778,28 @@
         <strong>OT:</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "OT" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "OT"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>2021:</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "2021" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "2021"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>LE:</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "LE" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "LE"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
       <div class="justify-items-center mr-3 ml-3">
         <strong>T/Co:</strong>
         <%= form.fields_for :questions do |question_form| %>
           <%= question_form.hidden_field :name, value: "TCO" %>
-          <%= question_form.text_field :answer, class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
+          <%= question_form.text_field :answer, value: existing_value(@location_questions.questions, "TCO"), class: "focus:ring-indigo-500 focus:border-indigo-500 w-24 flex-auto rounded-md sm:text-sm border-gray-300" %>
         <% end %>
       </div>
     </div>
